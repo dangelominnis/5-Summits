@@ -118,12 +118,12 @@
 .button1:hover {
     padding: 1rem 1.5rem;
     border-radius: 4px;
-    color: var(--color-white);
+    color: var(--color-black);
     background-color: var(--color-white);
 }
 
 .button2 {
-    border-radius: 8px;
+    border-radius: 4px;
     border: 2px solid var(--color-white);
     background-color: var(--color-white);
     color: black;
@@ -133,7 +133,6 @@
     transition: .3s ease-in-out all;
     text-decoration: none;
     text-transform: uppercase;
-
 }
 
 .button2:hover {
@@ -375,6 +374,11 @@
     background-color: var(--color-water);
 }
 
+.water-button span {
+    font-size: 2.5rem;
+    padding-left: .5rem;
+}
+
 /* Fire Button */
 .choose-button a {
     text-decoration: none;
@@ -392,6 +396,11 @@
     border-radius: 4px;
     color: var(--color-white);
     background-color: var(--color-red);
+}
+
+.choose-button span {
+    font-size: 2.5rem;
+    padding-left: .5rem;
 }
 
 /* Thunder Button */
@@ -413,6 +422,11 @@
     background-color: var(--color-thunder);
 }
 
+.thunder-button span {
+    font-size: 2.5rem;
+    padding-left: .5rem;
+}
+
 /* Ice Button */
 .ice-button a {
     text-decoration: none;
@@ -430,6 +444,15 @@
     border-radius: 4px;
     color: var(--color-white);
     background-color: var(--color-ice);
+}
+
+.ice-button span {
+    font-size: 2.5rem;
+    padding-left: .5rem;
+}
+
+.choose-button, .water-button, .ice-button, .thunder-button, .earth-button {
+    animation: sideArrow .7s ease-in-out infinite;
 }
 
 /* Earth Button */
@@ -451,6 +474,11 @@
     background-color: var(--color-earth);
 }
 
+.earth-button span {
+    font-size: 2.5rem;
+    padding-left: .5rem;
+}
+
 @keyframes rollingText {
     0% {
         transform: translateX(-100%);
@@ -462,6 +490,20 @@
 
     100% {
         transform: translateX(-0%);
+    }
+}
+
+@keyframes sideArrow {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(3%);
+    }
+
+    100% {
+        transform: translateX(0%);
     }
 }
 
@@ -560,6 +602,16 @@
     }
 
     .start-button a {
+        text-align: center;
+    }
+
+    .promise h2 {
+        font-size: 4rem;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .promise-button a {
         text-align: center;
     }
 

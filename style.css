@@ -1114,7 +1114,7 @@ a {
 
 .footer-box {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -1135,11 +1135,70 @@ a {
     font-size: 1.25rem;
     font-weight: 800;
     text-transform: uppercase;
+    text-align: center;
 }
 
 
+/* Promise */
+.promise {
+    height: 100vh;
+    background: url(img/promise-land.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    z-index: 4;
+    padding-top: var(--bar-height);
+    box-sizing: border-box;
+    position: relative;
+}
 
+.promise::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;               
+    width: 100%;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.5); 
+}
 
+.promise h2 {
+    color: white;
+    font-size: 6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 4rem;
+}
+
+.promise-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.promise-button a {
+    background-color: transparent;
+    color: var(--color-white);
+    border: 5px solid var(--color-white);
+    border-radius: 8px;
+    padding: 1rem 3rem;
+    margin-bottom: 1rem;
+    font-size: 2.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: .3s all ease-in-out;
+    animation: bouncingArrow .5s ease-in-out infinite;
+}
+
+.promise-button a:hover {
+    background-color: var(--color-white);
+    color: black;
+}
 
 /* Media Queries */
 @media only screen and (max-width:600px) {
