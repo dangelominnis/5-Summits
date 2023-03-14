@@ -1,0 +1,1335 @@
+/* Global Style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    /* position: relative; */
+}
+
+.container {
+    max-width: 140rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+
+:root {
+    --bar-height: 70px;
+    --color-water: #3e9fe6;
+    --color-water2: #d3eaef;
+    --color-fire: #f64f37;
+    --color-fire2: #ffebcd;
+    --color-thunder: #616161;
+    --color-thunder2: #a7bcbb;
+    --color-ice: #3961a1;
+    --color-ice2: #ade8f7;
+    --color-earth: #598442;
+    --color-earth2: #424242;
+    --color-text: #b8b8b8;
+    --color-black: #000;
+    --color-white: #ffffff ;
+    --color-creme: rgb(255, 251, 245);
+    --color-red: #d5474b;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Buttons */
+
+/* Bar */
+.u-centered {
+    width: 100%;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.bar {
+    position: fixed;
+    z-index: 40;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--bar-height);
+    box-shadow: 0 2px 10px rgba(177, 177, 177, 0.1);
+    transition: background 0.15s;
+}
+
+.bar--bg {
+    background: var(--color-black);
+}
+
+.bar__content {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bar__logo {
+    z-index: 60;
+    height: 1.75rem;
+    /* height: 100%; */
+}
+
+.bar__nav-toggle {
+    cursor: pointer;
+}
+
+.bar__nav-toggle i {
+    /* color: rgb(16, 81, 143); */
+    color: var(--color-secondary);
+    font-size: 2rem;
+}
+
+/* Nav */
+#inpNavToggle {
+    display: none;
+}
+
+#inpNavToggle:checked ~ .nav {
+    display: flex;
+}
+
+.nav{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: var(--bar-height);
+    left: 0;
+    width: 100%;
+    height: auto;
+    /* height: calc(100vh - var(--bar-height)); */
+    padding: 32px;
+    background: var(--color-primary);
+    box-sizing: border-box;
+}
+
+.nav__link {
+    font-size: 1.15rem;
+    font-weight: 400;
+    /* letter-spacing: .5px; */
+    color: var(--color-grey);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+    text-transform: none;
+    padding: 1rem 0;
+}
+
+.nav__link:hover {
+    opacity: 0.8;
+}
+
+.nav .btn-secondary-transparent {
+    border-radius: 50px;
+}
+
+@media screen and (min-width: 767px) {
+    .bar__nav-toggle {
+        display: none;
+    }
+
+    .nav {
+        display: initial;
+        position: static;
+        width: unset;
+        height: unset;
+        padding: unset;
+        background: transparent;
+    }
+
+    .nav__link {
+        border-bottom: none;
+    }
+
+    .nav__link:not(:last-of-type) {
+        margin-right: 2rem;
+    }
+}
+
+/* Header */
+.header {
+    height: 100vh;
+    /* background: url(/img/warrior-home.png); */
+    background: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-box h3 {
+    color: white;
+    font-size: 4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 0rem;
+}
+
+.header-box h1 {
+    color: white;
+    font-size: 8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+/* .header-box h1 span {
+    color: goldenrod;
+} */
+
+.header-button {
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: white;
+    padding: 1rem;
+    border: 5px solid white;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: .3s all ease-in-out;
+    animation: bouncingArrow .5s ease-in-out infinite;
+}
+
+.header-button:hover {
+    background-color: white;
+    color: black;
+}
+
+.header-button h4 {
+    font-size: 6rem;
+    font-weight: 800;
+}
+
+@keyframes bouncingArrow {
+    0% {
+        transform: translateY(5%);
+    }
+
+    50% {
+        transform: translateY(-5%);
+    }
+
+    100% {
+        transform: translateY(5%);
+    }
+}
+
+/* Intro */
+.intro {
+    height: 100vh;
+    padding: 0 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.intro h2 {
+    color: black;
+    font-size: 8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.intro p {
+    color: black;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.4;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+}
+
+.intro-button-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-button {
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: black;
+    padding: 1rem;
+    border: 5px solid black;
+    border-radius: 8px;
+    margin-top: 6rem;
+    margin-bottom: 1rem;
+    transition: .3s all ease-in-out;
+    animation: bouncingArrow .5s ease-in-out infinite;
+}
+
+.intro-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.intro-button h4 {
+    font-size: 6rem;
+    font-weight: 800;
+}
+
+/* Start */
+.start {
+    height: 100vh;
+    padding: 0 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start p {
+    color: black;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.4;
+    text-transform: uppercase;
+    margin-bottom: 6rem;
+    text-align: center;
+}
+
+.start-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-button a {
+    background-color: transparent;
+    color: black;
+    border: 5px solid black;
+    border-radius: 8px;
+    padding: 1rem 3rem;
+    margin-bottom: 1rem;
+    font-size: 2.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: .3s all ease-in-out;
+    animation: bouncingArrow .5s ease-in-out infinite;
+}
+
+.start-button a:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Showcase Section */
+.showcase {
+    height: 100vh;
+    /* width: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.showcase-box {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.showcase-bg-left {
+    flex-basis: 50%;
+    height: 100vh;
+    /* background-color: var(--color-water); */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.showcase-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    padding: 0 4rem;
+}
+
+.showcase-text h4 {
+    color: var(--color-white);
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+}
+
+.showcase-text h2 {
+    color: var(--color-white);
+    font-size: 8rem;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+}
+
+.showcase-text p {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.8;
+    margin-bottom: 4rem;
+}
+
+.showcase-button a {
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-white);
+    padding-bottom: .5rem;
+    color: var(--color-white);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: .3s ease-in-out all;
+}
+
+.showcase-button a:hover {
+    padding: .5rem 1rem;
+    border-radius: 4px;
+    color: var(--color-black);
+    background-color: var(--color-white);
+}
+
+.showcase-button a span {
+    padding-left: .5rem;
+}
+
+.showcase-bg-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+    height: 100vh;
+    background-color: lightpink;
+}
+
+.showcase-bg-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Water Summit */
+.summit {
+    background-color: var(--color-water);
+    padding: 10rem 8rem 6rem 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.summit-box {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.summit-box h6 {
+    color: var(--color-white);
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.4;
+    text-transform: uppercase;
+    margin-bottom: 10rem;
+    text-align: center;
+}
+
+.summit-choices-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 2rem;
+}
+
+.summit-card {
+    flex: 1;
+    transition: .3s all ease-in-out;
+    animation: cardWiggle 1s ease-in-out infinite;
+}
+
+.summit-card:nth-child(2) {
+    margin: 0 6rem;
+}
+
+.summit-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.summit-card h4 {
+    color: var(--color-white);
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 0rem;
+}
+
+.summit-card h3 {
+    color: var(--color-white);
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 0rem;
+}
+
+.summit-card p {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.summit-card-button {
+    margin-bottom: 2rem;
+}
+
+.summit-card-button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+    border-radius: 4px;
+    padding: .75rem 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: .3s all ease-in-out;
+}
+
+.summit-card-button a:hover {
+    background-color: var(--color-white);
+    color: var(--color-water);
+}
+
+/* Fire Summit */
+.fire-summit {
+    background-color: var(--color-fire);
+    padding: 10rem 8rem 6rem 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fire-summit-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.fire-summit-box h6 {
+    color: var(--color-white);
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.4;
+    text-transform: uppercase;
+    margin-bottom: 10rem;
+    text-align: center;
+}
+
+.fire-summit-choices-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 2rem;
+}
+
+.fire-summit-card {
+    flex: 1;
+    transition: .3s all ease-in-out;
+    animation: cardWiggle 1s ease-in-out infinite;
+}
+
+.fire-summit-card:nth-child(2) {
+    margin: 0 6rem;
+}
+
+.fire-summit-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.fire-summit-card h4 {
+    color: var(--color-white);
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 0rem;
+}
+
+.fire-summit-card h3 {
+    color: var(--color-white);
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 0rem;
+}
+
+.fire-summit-card p {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.fire-summit-card-button {
+    margin-bottom: 2rem;
+}
+
+.fire-summit-card-button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+    border-radius: 8px;
+    padding: .75rem 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: .3s all ease-in-out;
+}
+
+.fire-summit-card-button a:hover {
+    background-color: var(--color-white);
+    color: var(--color-fire);
+}
+
+/* Thunder Summit */
+.thunder-summit {
+    background-color: var(--color-thunder);
+    padding: 10rem 8rem 6rem 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thunder-summit-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.thunder-summit-box h6 {
+    color: var(--color-white);
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.4;
+    text-transform: uppercase;
+    margin-bottom: 10rem;
+    text-align: center;
+}
+
+.thunder-summit-choices-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 2rem;
+}
+
+.thunder-summit-card {
+    flex: 1;
+    transition: .3s all ease-in-out;
+    animation: cardWiggle 1s ease-in-out infinite;
+}
+
+.thunder-summit-card:nth-child(2) {
+    margin: 0 6rem;
+}
+
+.thunder-summit-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.thunder-summit-card h4 {
+    color: var(--color-white);
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 0rem;
+}
+
+.thunder-summit-card h3 {
+    color: var(--color-white);
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 0rem;
+}
+
+.thunder-summit-card p {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.thunder-summit-card-button {
+    margin-bottom: 2rem;
+}
+
+.thunder-summit-card-button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+    border-radius: 8px;
+    padding: .75rem 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: .3s all ease-in-out;
+}
+
+.thunder-summit-card-button a:hover {
+    background-color: var(--color-white);
+    color: var(--color-thunder);
+}
+
+/* Ice Summit */
+.ice-summit {
+    background-color: var(--color-ice);
+    padding: 10rem 8rem 6rem 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ice-summit-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.ice-summit-box h6 {
+    color: var(--color-white);
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.4;
+    text-transform: uppercase;
+    margin-bottom: 10rem;
+    text-align: center;
+}
+
+.ice-summit-image-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6rem;
+}
+
+.ice-summit-image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.ice-summit-choices-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 2rem;
+}
+
+.ice-summit-card {
+    flex: 1;
+    transition: .3s all ease-in-out;
+    animation: cardWiggle 1s ease-in-out infinite;
+}
+
+.ice-summit-card:nth-child(2) {
+    margin: 0 6rem;
+}
+
+.ice-summit-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.ice-summit-card h4 {
+    color: var(--color-white);
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 0rem;
+}
+
+.ice-summit-card h3 {
+    color: var(--color-white);
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 0rem;
+}
+
+.ice-summit-card p {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.ice-summit-card-button {
+    margin-bottom: 2rem;
+}
+
+.ice-summit-card-button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+    border-radius: 8px;
+    padding: .75rem 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: .3s all ease-in-out;
+}
+
+.ice-summit-card-button a:hover {
+    background-color: var(--color-white);
+    color: var(--color-ice);
+}
+
+/* Earth Summit */
+.earth-summit {
+    background-color: var(--color-earth);
+    padding: 10rem 8rem 6rem 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.earth-summit-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.earth-summit-box h6 {
+    color: var(--color-white);
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.4;
+    text-transform: uppercase;
+    margin-bottom: 10rem;
+    text-align: center;
+}
+
+.earth-summit-choices-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 2rem;
+}
+
+.earth-summit-card {
+    flex: 1;
+    transition: .3s all ease-in-out;
+    animation: cardWiggle 1s ease-in-out infinite;
+}
+
+.earth-summit-card:nth-child(2) {
+    margin: 0 6rem;
+}
+
+.earth-summit-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.earth-summit-card h4 {
+    color: var(--color-white);
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 0rem;
+}
+
+.earth-summit-card h3 {
+    color: var(--color-white);
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 0rem;
+}
+
+.earth-summit-card p {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.earth-summit-card-button {
+    margin-bottom: 2rem;
+}
+
+.earth-summit-card-button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+    border-radius: 8px;
+    padding: .75rem 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: .3s all ease-in-out;
+}
+
+.earth-summit-card-button a:hover {
+    background-color: var(--color-white);
+    color: var(--color-earth);
+}
+
+@keyframes cardWiggle {
+    0% {
+        transform: translateY(2%);
+    }
+
+    50% {
+        transform: translateY(-2%);
+    }
+
+    100% {
+        transform: translateY(2%);
+    }
+}
+
+/* Modal */
+.modal {
+    height: 100vh;
+    background: url(/img/warrior1.png);
+    /* background: black; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 40;
+}
+
+.modal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal h2 {
+    color: white;
+    font-size: 8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 3rem;
+}
+
+.modal h4 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.4;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.modal-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-button a {
+    background-color: transparent;
+    color: white;
+    border: 5px solid white;
+    border-radius: 8px;
+    padding: 1rem 3rem;
+    margin-bottom: 1rem;
+    font-size: 2.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: .3s all ease-in-out;
+    animation: bouncingArrow .5s ease-in-out infinite;
+}
+
+.modal-button a:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Transition */
+.transition {
+    height: 100vh;
+    background: url(/img/warrior1.png);
+    /* background: black; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 40;
+}
+
+.transition::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.transition h2 {
+    color: white;
+    font-size: 8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.transition h4 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.4;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.transition-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.transition-button a {
+    background-color: transparent;
+    color: white;
+    border: 5px solid white;
+    border-radius: 8px;
+    padding: 1rem 3rem;
+    margin-bottom: 1rem;
+    font-size: 2.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: .3s all ease-in-out;
+    animation: bouncingArrow .5s ease-in-out infinite;
+}
+
+.transition-button a:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Footer */
+.footer {
+    padding: 2rem;
+    background: black;
+}
+
+.footer-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+
+}
+
+.footer-logo img {
+    width: 50px;
+}
+
+.footer-text {
+
+}
+
+.footer-text h4 {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+
+
+
+
+/* Media Queries */
+@media only screen and (max-width:600px) {
+    .header {
+        height: 100vh;
+    }
+
+    .header-box h4 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .header-box h1 {
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .intro p {
+        font-size: 1.5rem;
+    }
+
+    .start p {
+        font-size: 1.5rem;
+    }
+
+    .start-button a {
+        text-align: center;
+    }
+
+    .showcase {
+        /* height: 150vh; */
+        padding: 4rem 0;
+    }
+
+    .showcase-text h2 {
+        font-size: 3rem;
+    }
+
+    .summit {
+        padding: 6rem 2rem 6rem 2rem;
+    }
+
+    .summit-box, .fire-summit-box, .thunder-summit-box, .ice-summit-box, .earth-summit-box {
+        /* padding: 4rem 0; */
+        height: 100vh;
+    }
+
+    .summit-box h6 {
+        font-size: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .summit-choices-box {
+        flex-direction: column;
+    }
+
+    .summit-card:nth-child(2) {
+        margin: 0;
+    }
+
+
+
+    .fire-summit {
+        padding: 6rem 2rem 6rem 2rem;
+    }
+
+    .fire-summit-box h6 {
+        font-size: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .fire-summit-choices-box {
+        flex-direction: column;
+    }
+
+    .fire-summit-card:nth-child(2) {
+        margin: 0;
+    }
+
+
+
+    .thunder-summit {
+        padding: 10rem 2rem 10rem 2rem;
+    }
+    .thunder-summit-box h6 {
+        font-size: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .thunder-summit-choices-box {
+        flex-direction: column;
+    }
+
+    .thunder-summit-card:nth-child(2) {
+        margin: 0;
+    }
+
+
+
+    .ice-summit {
+        padding: 10rem 2rem 10rem 2rem;
+    }
+    .ice-summit-box h6 {
+        font-size: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .ice-summit-choices-box {
+        flex-direction: column;
+    }
+
+    .ice-summit-card:nth-child(2) {
+        margin: 0;
+    }
+
+
+
+    .earth-summit {
+        padding: 10rem 2rem 10rem 2rem;
+    }
+    .earth-summit-box h6 {
+        font-size: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .earth-summit-choices-box {
+        flex-direction: column;
+    }
+
+    .earth-summit-card:nth-child(2) {
+        margin: 0;
+    }
+
+
+
+
+    .summit-box h6 {
+        font-size: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .summit-choices-box {
+        flex-direction: column;
+    }
+
+    .summit-card:nth-child(2) {
+        margin: 0;
+    }
+
+
+
+
+    .home-box h1 {
+        font-size: 4rem;
+    }
+
+    .choose {
+        padding: 8rem 2rem;
+    }
+
+    .choose-box {
+        flex-direction: column;
+    }
+
+    .header-box h3 {
+        text-align: center;
+    }
+
+    .header-button {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .intro-button {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .intro-button h4 {
+        font-size: 4rem;
+    }
+
+    .start-button a {
+        font-size: 1.75rem;
+    }
+
+    .footer-text {
+        flex-basis: 100%;
+    }
+
+    .footer-text h4 {
+        text-align: center;
+    }
+}

@@ -1,0 +1,774 @@
+#water {
+    color: var(--color-water);
+}
+
+#fire {
+    color: var(--color-red);
+}
+
+#thunder {
+    color: var(--color-thunder);
+}
+
+#ice {
+    color: var(--color-ice);
+}
+
+#earth {
+    color: var(--color-earth);
+}
+
+#water-bg {
+    background-color: var(--color-water);
+}
+
+#fire-bg {
+    background-color: var(--color-fire);
+}
+
+#thunder-bg {
+    background-color: var(--color-thunder);
+}
+
+#ice-bg {
+    background-color: var(--color-ice);
+}
+
+#earth-bg {
+    background-color: var(--color-earth);
+}
+
+.nav .button2 {
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+/* Home */
+.home {
+    padding: 12rem 4rem 0 4rem;
+    height: 100vh;
+    /* background: url(/img/warrior-home.png); */
+    background: var(--color-black);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.home-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.home-box h4 {
+    color: var(--color-text);
+    font-size: 2.25rem;
+    letter-spacing: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.home-box h1 {
+    color: var(--color-creme);
+    font-size: 7rem;
+    font-weight: 800;
+    line-height: 1.1;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.home-box p {
+    color: var(--color-text);
+    font-size: 1.75rem;
+    font-weight: 300;
+    margin-bottom: 6rem;
+}
+
+.home-button-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button2 {
+    margin-right: 3rem;
+}
+
+.button1 {
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-white);
+    padding-bottom: .5rem;
+    color: var(--color-white);
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: .3s ease-in-out all;
+}
+
+.button1:hover {
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+    color: var(--color-white);
+    background-color: var(--color-white);
+}
+
+.button2 {
+    border-radius: 8px;
+    border: 2px solid var(--color-white);
+    background-color: var(--color-white);
+    color: black;
+    font-size: 1.4rem;
+    font-weight: 800;
+    padding: 1rem 1.5rem;
+    transition: .3s ease-in-out all;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+.button2:hover {
+    background-color: transparent;
+    color: var(--color-white);
+}
+
+/* Game */
+.game {
+    padding: 12rem 6rem 12rem 6rem;
+    background-color: var(--color-creme);
+}
+
+.game h4 {
+    color: var(--color-text);
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.game h2 {
+    color: var(--color-black);
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 6rem;
+}
+
+.game-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.game-card {
+    flex: 1;
+    margin: 1rem;
+}
+
+.game-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.game-text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.game-info {
+
+}
+
+.game-info h3 {
+    color: var(--color-black);
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+}
+
+.game-info p {
+    /* color: rgb(255, 251, 245, 0.75); */
+    color: var(--color-text);
+    font-size: 1.15rem;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.game-button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.game-button a {
+    width: 1rem;
+    height: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .75rem;
+    background-color: transparent;
+    color: var(--color-text);
+    border: 1.5px solid var(--color-text);
+    border-radius: 4px;
+    font-size: 1.5rem;
+    transition: .3s ease-in-out all;
+}
+
+.game-button a:hover {
+    background-color: var(--color-text);
+    color: white;
+}
+
+/* Choose */
+.choose {
+    padding: 8rem 6rem;
+    background-color: black;
+}
+
+.choose-box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.choose-text {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 4rem;
+}
+
+.choose-text h4 {
+    color: var(--color-red);
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.choose-text h2 {
+    color: var(--color-white);
+    font-size: 7rem;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.choose-text p {
+    color: var(--color-text);
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+}
+
+.choose-button {
+
+}
+
+.choose-image {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choose-image img {
+    width: 90%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* Choose 2 */
+.choose2 {
+    padding: 8rem 6rem;
+    background-color: black;
+}
+
+.choose2-box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.choose2-text {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 4rem;
+}
+
+.choose2-text h4 {
+    color: var(--color-red);
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.choose2-text h2 {
+    color: var(--color-white);
+    font-size: 7rem;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.choose2-text p {
+    color: var(--color-text);
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+}
+
+.choose2-button {
+
+}
+
+.choose2-image {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choose2-image img {
+    width: 90%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* Water Button */
+.water-button a {
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-water);
+    padding-bottom: .5rem;
+    color: var(--color-water);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: .3s ease-in-out all;
+}
+
+.water-button a:hover {
+    padding: .5rem 1rem;
+    border-radius: 4px;
+    color: var(--color-white);
+    background-color: var(--color-water);
+}
+
+/* Fire Button */
+.choose-button a {
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-red);
+    padding-bottom: .5rem;
+    color: var(--color-red);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: .3s ease-in-out all;
+}
+
+.choose-button a:hover {
+    padding: .5rem 1rem;
+    border-radius: 4px;
+    color: var(--color-white);
+    background-color: var(--color-red);
+}
+
+/* Thunder Button */
+.thunder-button a {
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-thunder);
+    padding-bottom: .5rem;
+    color: var(--color-thunder);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: .3s ease-in-out all;
+}
+
+.thunder-button a:hover {
+    padding: .5rem 1rem;
+    border-radius: 4px;
+    color: var(--color-white);
+    background-color: var(--color-thunder);
+}
+
+/* Ice Button */
+.ice-button a {
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-ice);
+    padding-bottom: .5rem;
+    color: var(--color-ice);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: .3s ease-in-out all;
+}
+
+.ice-button a:hover {
+    padding: .5rem 1rem;
+    border-radius: 4px;
+    color: var(--color-white);
+    background-color: var(--color-ice);
+}
+
+/* Earth Button */
+.earth-button a {
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-earth);
+    padding-bottom: .5rem;
+    color: var(--color-earth);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: .3s ease-in-out all;
+}
+
+.earth-button a:hover {
+    padding: .5rem 1rem;
+    border-radius: 4px;
+    color: var(--color-white);
+    background-color: var(--color-earth);
+}
+
+@keyframes rollingText {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-0%);
+    }
+}
+
+/* Banner */
+.banner {
+    /* padding: 8rem 6rem; */
+    background-color: var(--color-red);
+}
+
+.banner h4 {
+    color: var(--color-red);
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.banner h2 {
+    color: var(--color-black);
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.banner-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.banner-button a {
+    width: 100%;
+    margin: auto;
+    border-radius: 12px;
+    border: 5px solid var(--color-black);
+    background-color: var(--color-black);
+    color: white;
+    font-size: 6rem;
+    font-weight: 800;
+    padding: 1rem 1.5rem;
+    transition: .3s ease-in-out all;
+    text-decoration: none;
+    text-transform: uppercase;
+    animation: blackButtonBlink .7s ease-in-out infinite;
+}
+
+.banner-button a:hover {
+    background-color: transparent;
+    color: var(--color-black);
+}
+
+@keyframes blackButtonBlink {
+    0% {
+        background-color: transparent;
+    }
+
+    50% {
+        background-color: var(--color-black);
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}
+
+/* Media Queries */
+@media only screen and (max-width:600px) {
+    .header {
+        height: 80vh;
+        padding: 12rem 2rem 0 2rem;
+    }
+
+    .header-box h4 {
+        font-size: 4rem;
+        text-align: center;
+    }
+    .header-box h1 {
+        font-size: 4rem;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .start p {
+        font-size: 1.5rem;
+    }
+
+    .start-button a {
+        text-align: center;
+    }
+
+    .showcase {
+        /* height: 150vh; */
+        padding: 4rem 0;
+    }
+
+    .showcase-text h2 {
+        font-size: 3rem;
+    }
+
+    .summit {
+        padding: 6rem 2rem 6rem 2rem;
+    }
+
+    .summit-box, .fire-summit-box, .thunder-summit-box, .ice-summit-box, .earth-summit-box {
+        /* padding: 4rem 0; */
+        height: 180vh;
+    }
+
+    .summit-box h6 {
+        font-size: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .summit-choices-box {
+        flex-direction: column;
+    }
+
+    .summit-card:nth-child(2) {
+        margin: 0;
+    }
+
+
+
+    .fire-summit {
+        padding: 6rem 2rem 6rem 2rem;
+    }
+
+    .fire-summit-box h6 {
+        font-size: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .fire-summit-choices-box {
+        flex-direction: column;
+    }
+
+    .fire-summit-card:nth-child(2) {
+        margin: 0;
+    }
+
+
+
+    .thunder-summit {
+        padding: 6rem 2rem 6rem 2rem;
+    }
+    .thunder-summit-box h6 {
+        font-size: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .thunder-summit-choices-box {
+        flex-direction: column;
+    }
+
+    .thunder-summit-card:nth-child(2) {
+        margin: 0;
+    }
+
+
+
+    .ice-summit {
+        padding: 6rem 2rem 6rem 2rem;
+    }
+    .ice-summit-box h6 {
+        font-size: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .ice-summit-choices-box {
+        flex-direction: column;
+    }
+
+    .ice-summit-card:nth-child(2) {
+        margin: 0;
+    }
+
+
+
+    .earth-summit {
+        padding: 6rem 2rem 6rem 2rem;
+    }
+    .earth-summit-box h6 {
+        font-size: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .earth-summit-choices-box {
+        flex-direction: column;
+    }
+
+    .earth-summit-card:nth-child(2) {
+        margin: 0;
+    }
+
+
+
+
+    .summit-box h6 {
+        font-size: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .summit-choices-box {
+        flex-direction: column;
+    }
+
+    .summit-card:nth-child(2) {
+        margin: 0;
+    }
+
+
+
+
+    .home-box h1 {
+        font-size: 4rem;
+        /* text-align: left; */
+    }
+
+    .home-box h4 {
+        text-align: left;
+        font-size: 1.75rem;
+    }
+
+    .home-box {
+        justify-content: left;
+        align-items: left;
+    }
+
+    .home-button-box {
+        flex-direction: column;
+    }
+    .choose {
+        padding: 8rem 2rem;
+    }
+
+    .choose-box {
+        flex-direction: column;
+    }
+
+    .game-box {
+        flex-direction: column;
+    }
+
+    .game {
+        padding: 12rem 2rem;
+    }
+
+    .choose-box {
+        flex-direction: column-reverse;
+    }
+
+    .choose2 {
+        padding: 8rem 2rem;
+    }
+
+    .choose2-box {
+        flex-direction: column;
+    }
+
+    .choose-image {
+        margin-bottom: 2rem;
+    }
+
+    .choose2-image {
+        margin-bottom: 2rem;
+    }
+
+    .choose-image img {
+        width: 100%;
+    }
+
+    .choose-text {
+        padding: 0;
+    }
+
+    .choose-text h2 {
+        font-size: 5rem;
+    }
+
+    .choose2-text {
+        padding: 0;
+    }
+
+    .choose2-text h2 {
+        font-size: 5rem;
+    }
+
+    .home-button {
+        margin: auto;
+    }
+
+    .button2 {
+        margin-right: 0;
+    }
+
+    .home-button:nth-child(1) {
+        margin-bottom: 4rem;
+    }
+}
